@@ -1,0 +1,1 @@
+A simple message encrypter which randomly generates the key each time the program is being run, hence there is slightly better security compared to a normal Caeser cipher. Generating passwords through this script is NOT recommended.
