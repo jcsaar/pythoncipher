@@ -1,0 +1,29 @@
+import random
+import string
+
+letters = " " + string.punctuation + string.ascii_letters + string.digits
+letters = list(letters)
+key = letters.copy()
+random.shuffle(key)
+
+# to encrypt
+plain_text = input("Enter your message:")
+encrypted_message = ""
+
+for letter in plain_text:
+    index = letters.index(letter)
+    encrypted_message += key[index]
+
+print(f"your message: {plain_text}")
+print(f"encrypted message: {encrypted_message}")
+
+# to decrypt (opposite of encrypting)
+encrypted_message = input("Enter your encrypted message:")
+plain_text = ""
+
+for letter in encrypted_message:
+    index = key.index(letter)
+    plain_text += letters[index]
+
+print(f"encrypted message: {plain_text}")
+print(f"your message: {encrypted_message}")
